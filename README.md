@@ -14,6 +14,10 @@ I have added the Gerber files in the `PCB/Gerber` folder, just zip and upload to
 
 I have also included the EAGLE design files if you need to modify the design for yoyr needs.
 
+## Terminal connector pinout
+
+GND / VCC | CH1-1 / CH1-2 / VCC | CH2-1 / CH2-2 / VCC
+
 ## Firmware
 
 I use ESPHome to set it up, which is the easiest way for it to show up in Home Assistant. 
@@ -70,4 +74,8 @@ You will need a USB-Serial adapter for initial upload of the firmware, and use t
 
 ## Enclosure
 
-...work in progress...
+![Enclosure](images/IMG_1869.jpeg "Enclosure")
+
+I designed a simple enclosure for 3D printing, available as STL files in the `Enclosure` folder. 
+
+I also included the Fusion360 design file if you need to modify the design for your usage. 
