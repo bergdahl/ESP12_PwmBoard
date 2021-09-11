@@ -30,6 +30,38 @@ esphome:
   platform: ESP8266
   board: esp12e
 ```
+Add the following section to add the PWM controls as dimmable lights in Home Assistant.
+```
+output:
+  - platform: esp8266_pwm
+    pin: GPIO13
+    id: output_pwm1
+  - platform: esp8266_pwm
+    pin: GPIO12
+    id: output_pwm2
+  - platform: esp8266_pwm
+    pin: GPIO5
+    id: output_pwm3
+  - platform: esp8266_pwm
+    pin: GPIO4
+    id: output_pwm4
+    
+light:
+  - platform: monochromatic
+    name: "pwm1"
+    output: "output_pwm1"
+  - platform: monochromatic
+    name: "pwm2"
+    output: "output_pwm2"
+  - platform: monochromatic
+    name: "pwm3"
+    output: "output_pwm3"
+  - platform: monochromatic
+    name: "pwm4"
+    output: "output_pwm4"
+```
+
+You can optionally setup your strips as color controllable, for use with dual color LED strips, or two strips with different color values inside the same stip enclosure. 
 Add the following section to add the PWM controls as 2 channels with cold/warm white lights in Home Assistant. Substitute the color temperature values for your LED strips.
 
 ```
